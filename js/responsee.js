@@ -161,6 +161,8 @@ jQuery(document).ready(function($) {
   var $menuItems = $('.nav-menu-item a');
   $menuItems.on('click', function () {
     var segmentId = this.id;
-    rollTo(segmentId);
+    if (this.id != null) {
+      rollTo(segmentId);      
+    }
   });
 });
